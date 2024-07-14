@@ -1,0 +1,6 @@
+<div class="bottom-sheet" [class.open]="isOpen">
+  <div class="bottom-sheet-content">
+    <button class="close-button" (click)="close()">Close</button>
+    <ng-content> </ng-content>
+  </div>
+</div>

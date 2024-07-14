@@ -1,0 +1,18 @@
+.star-rating {
+  display: flex;
+}
+
+.full-star::before {
+  content: "★";
+  color: gold;
+}
+
+.half-star::before {
+  content: "⯪☆"; /* Use a half-star icon or appropriate Unicode character */
+  color: gold;
+}
+
+.empty-star::before {
+  content: "☆";
+  color: lightgray;
+}

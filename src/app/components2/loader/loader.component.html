@@ -1,0 +1,4 @@
+<div [ngSwitch]="type">
+  <div *ngSwitchCase="LoaderType.Graphic" class="spinner"></div>
+  <div *ngSwitchCase="LoaderType.Text">{{ text }}</div>
+</div>

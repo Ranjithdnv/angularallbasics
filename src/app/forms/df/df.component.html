@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div *ngFor="let field of fieldConfigs">
+    <label>{{ field.label }}</label> <button>{{ field.lab }}</button>
+    <input type="text" [formControlName]="field.key" />
+    <div *ngIf="form.get(field.key)?.invalid && form.get(field.key)?.touched">
+      <div *ngIf="form.get(field.key)?.errors?.['required']">
+        Field is required
+      </div>
+      <div *ngIf="form.get(field.key)?.errors?.['email']">
+        Invalid email format
+      </div>
+    </div>
+  </div>
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

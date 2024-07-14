@@ -1,0 +1,40 @@
+<!-- dynamic-form.component.html -->
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div formArrayName="fields">
+    <div
+      *ngFor="let field of fields.controls; let i = index"
+      [formGroupName]="i"
+    >
+      <label [attr.for]="field.get('name')?.value">{{
+        field.get("label")?.value
+      }}</label>
+      <input
+        *ngIf="field.get('type')?.value === 'text'"
+        [formControlName]="'value'"
+        [id]="field.get('name')?.value"
+        type="text"
+      />
+      <input
+        *ngIf="field.get('type')?.value === 'email'"
+        [formControlName]="'value'"
+        [id]="field.get('name')?.value"
+        type="email"
+      />
+      <!-- Add more input types as needed -->
+      <div
+        *ngIf="
+          field.get('value')?.invalid &&
+          (field.get('value')?.dirty || field.get('value')?.touched)
+        "
+      >
+        <div *ngIf="field.get('value')?.errors?.['required']">
+          {{ field.get("label")?.value }} is required.
+        </div>
+        <div *ngIf="field.get('value')?.errors?.['email']">
+          Please enter a valid email address.
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="submit">Submit</button>
+</form>

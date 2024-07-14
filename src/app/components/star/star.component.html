@@ -1,0 +1,10 @@
+<div class="star-rating">
+  <ng-container *ngFor="let star of fullStars">
+    <i class="full-star"></i>
+  </ng-container>
+  <i *ngIf="hasHalfStar" class="half-star"></i>
+  <ng-container *ngFor="let star of emptyStars">
+    <i class="empty-star"></i>
+  </ng-container>
+</div>
+<div routerLink="/loader">load</div>

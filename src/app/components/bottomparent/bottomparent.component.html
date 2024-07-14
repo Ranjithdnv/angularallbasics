@@ -1,0 +1,9 @@
+<button (click)="openBottomSheet()">Open Bottom Sheet</button>
+above-parent
+<app-bottom [isOpen]="isBottomSheetOpen">
+  <h2>Bottom Sheet Content</h2>
+  <p>This is the content inside the bottom sheet.</p>
+  =========
+</app-bottom>
+
+<p>Last Message Received: {{ lastMessage }}</p>

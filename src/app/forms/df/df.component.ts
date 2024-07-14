@@ -64,6 +64,7 @@ export class DFComponent {
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
+      console.log(this.form.value);
       // Perform form submission logic here
     } else {
       // Mark all fields as touched to trigger validation messages

@@ -13,6 +13,11 @@ import { BehaviourComponent } from './components3/behaviour/behaviour.component'
 import { BehaviourSubscribeComponent } from './components3/behaviour-subscribe/behaviour-subscribe.component';
 import { DynamicFComponent } from './forms/dynamic-f/dynamic-f.component';
 import { DFComponent } from './forms/df/df.component';
+import { ChekdrComponent } from './components3/chekdr/chekdr.component';
+import { ErefviewComponent } from './components3/erefview/erefview.component';
+import { Final1Component } from './final/final1/final1.component';
+import { Final1parentComponent } from './final/final1parent/final1parent.component';
+import { RouteService } from './final/service/route.service';
 
 export const routes: Routes = [
   { path: 'accordian', component: AccordianComponent },
@@ -34,4 +39,13 @@ export const routes: Routes = [
   { path: 'loaderparent', component: LoaderparentComponent },
   { path: 'dynamic', component: DynamicFComponent },
   { path: 'df', component: DFComponent },
+  { path: 'dfdr', component: ChekdrComponent },
+  { path: 'EVref', component: ErefviewComponent },
+  { path: 'final', component: Final1Component },
+  {
+    path: 'finalparent',
+    component: Final1parentComponent,
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+  },
 ];

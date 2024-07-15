@@ -1,0 +1,9 @@
+<p>final1parent works!</p>
+<app-final1 (sending)="recieve($event)" [vchild]="a"></app-final1>
+<button (click)="ask()">ask</button>
+<form [formGroup]="form" action="">
+  <div *ngFor="let feild of config">
+    <label for="">{{ feild.key }}</label>
+  </div>
+</form>
+<button routerLink="/final">link</button>

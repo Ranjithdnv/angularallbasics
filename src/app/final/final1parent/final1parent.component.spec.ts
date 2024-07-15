@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DirectivessComponent } from './directivess.component';
+import { Final1parentComponent } from './final1parent.component';
 
-describe('DirectivessComponent', () => {
-  let component: DirectivessComponent;
-  let fixture: ComponentFixture<DirectivessComponent>;
+describe('Final1parentComponent', () => {
+  let component: Final1parentComponent;
+  let fixture: ComponentFixture<Final1parentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DirectivessComponent]
+      imports: [Final1parentComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DirectivessComponent);
+    fixture = TestBed.createComponent(Final1parentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
